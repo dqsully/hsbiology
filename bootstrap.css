@@ -10,9 +10,11 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  font-family: Arial;
+  font-family: Lato;
   font-size: 18px;
   background-color: #f0faef;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -143,6 +145,8 @@ a.t {
 h1 {
   text-align: center;
   color: #319924;
+  font-weight: 300;
+  font-size: 42px;
 }
 h2 {
   color: #319924;
