@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HS Biology Index</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bootstrap.js"></script>
+    <style>
+      .item {
+        padding: 7px 3px;
+        border: 2px solid #77cd4e;
+        display: flex;
+        transition: box-shadow .3s;
+        text-decoration: none !important;
+        max-height: 200px;
+        box-sizing: content-box;
+      }
+        .item > * {
+          display: block;
+          margin: 0 4px;
+        }
+        .item > .title {
+          color: #77cd4e;
+          font-size: 54px;
+          flex: 1;
+          vertical-align: middle;
+          text-align: right;
+        }
+        .item > .desc {
+          color: black;
+          font-size: 18px;
+          display: block;
+          flex: 1.5;
+          text-align: justify;
+        }
+        .item > img {
+          flex: 0;
+          height: 126px;
+          vertical-align: middle;
+        }
+
+        .item:hover {
+          box-shadow: 0 0 5px rgba(#77cd4e, 0.86);
+          transition: box-shadow .1s;
+        }
+          .item:hover .title {
+            text-decoration: underline;
+          }
+      #page {
+        padding: 20px 15px;
+      }
+    </style>
+    <script>
+      onReady(function() {console.log('hi')});
+    </script>
+  </head>
+  <body>
+    <div id="nav" class="u cur">
+      <div class="a">HS Biology Index</div>
+      <div class="vl w b"></div>
+      <div class="e"></div>
+      <div class="vl w b"></div>
+      <div class="f" id="author">By Dakota Sullivan</div>
+    </div>
+    <div id="page">
+      <a href="scimetnts.html" class="item">
+        <span class="title">Scientific Method Notes</span>
+        <span class="desc">Interactive notes for the Scientific Method. Click on a section to expand it. There are places to practice writing Problems and Hypotheses, and randomly generated interactive quizzes.</span>
+        <img src="scimetnts.png" alt="Screenshot of Scientific Method Notes">
+      </a>
+      <a href="biochem.html" class="item">
+        <span class="title">Biochemistry Notes</span>
+        <span class="desc">Notes on the elements of life, biomolecules, and the importance of water and the pH scale.</span>
+        <img src="biochem.png" alt="Screenshot of Biochemistry Notes">
+      </a>
+    </div>
+    <script>_onready()</script>
+  </body>
+</html>
+/

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HS Biology | Scientific Method Notes</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bootstrap.js"></script>
+    <script>
+      const oh = 8*42+62;
+      const minh = 225 + oh;
+
+      onReady(function () {
+
+        prevSection = d('page').children[0]
+
+        var c = d('page').children;
+        for(var i=0; i<c.length; i++) {
+          addExpand(i, c);
+        }
+
+        winr();
+        window.addEventListener('resize', winr);
+      });
+      function addExpand(i, c) {
+        c[i].children[0].addEventListener('click', function() {
+          expandSection(c[i]);
+        });
+      }
+      function winr() {
+        if(window.innerHeight < minh) d('page').className = 'sm';
+        else d('page').className = '';
+
+        prevSection.children[1].style.height = expHeight() - oh + 'px';
+        prevSection.style.flexBasis = 42 + expHeight() - oh + 'px';
+      }
+      var prevSection;
+      function expandSection(sec) {
+        prevSection.className = 'section min';
+        prevSection.style.flexBasis = '';
+        sec.className = 'section';
+        sec.children[1].style.height = expHeight() - oh + 'px';
+        sec.style.flexBasis = 42 + expHeight() - oh + 'px';
+        prevSection = sec;
+      }
+      function expHeight() {
+        return (window.innerHeight >= minh ? window.innerHeight : minh);
+      }
+    </script>
+    <style>
+      #page {
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      .section {
+        color: #319924;
+        width: 100%;
+        flex: 1 0 275px;
+        overflow-y: hidden;
+        transition: flex-basis 0.5s;
+      }
+        .section.min {
+          flex: 0 0 42px;
+          min-height: 0;
+        }
+        .section:not(:last-child) {
+          border-bottom: 2px solid #319924;
+        }
+
+        .section .title {
+          font-size: 36px;
+          height: 42px;
+          overflow: visible;
+          display: inline-block;
+          cursor: pointer;
+          width: 100%;
+          padding-left: 15px;
+          background-color: rgb(250, 250, 250);
+          box-sizing: border-box;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="nav" class="u cur">
+      <a href="index.html" class="a t">HS Biology | Scientific Method Notes</a>
+      <div class="vl w b"></div>
+      <div class="e"></div>
+      <div class="vl w b"></div>
+      <div class="f" id="author">By Dakota Sullivan</div>
+    </div>
+    <div id="page">
+      <div class="section">
+        <div class="title u">Scientific Method</div>
+        <div class="cont">
+          <p>
+            The scientific method is a process used to find the answers to scientific problems.
+            The process is as follows: Problem, Investigation, Hypothesis, Experiment, Results, and Conclusion.
+            These steps are best remembered through the acronym PIHERC, which can also stand for "Pigs In Hawaii Eat Raw Corn."
+            When following the Scientific Method, do not forget to go through every step thouroughly.
+          </p>
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u min">Problem</div>
+        <div class="cont">
+          <p>
+            A scientific problem is always in the form of a question, and must be testable, as in it can be answered by conducting an experiment.
+            For example, "Which types of Scotch brand tape stick best?"
+            A problems statement will contain the <strong>independent variable</strong>, the value you change, and the <strong>dependent variable</strong>
+            A problem statement also has to be specific, so as you'll see in the example, I explicitly stated the tape was from Scotch.
+            You will always find the <strong>independent variable</strong> and <strong>dependent variable</strong> in a problem statement in that order.
+            In this example, the indenependent and dependent variables are bolded: "Which <strong>types of Scotch tape</strong> <strong>stick best</strong>?"
+
+          </p>
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Investigation</div>
+        <div class="cont">
+
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Hypothesis</div>
+        <div class="cont">
+
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Experiments</div>
+        <div class="cont">
+
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Results</div>
+        <div class="cont">
+
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Conclusion</div>
+        <div class="cont">
+
+        </div>
+      </div>
+      <div class="section min">
+        <div class="title u">Lab Reports</div>
+        <div class="cont">
+
+        </div>
+      </div>
+    </div>
+    <script>_onready()</script>
+  </body>
+</html>
